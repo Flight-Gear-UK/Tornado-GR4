@@ -1,5 +1,12 @@
 #ReadMe 3d-model
 
+The model used here was created in 2019 by Andreas.S as a derivitive of the Heiki Schulz model. There are various improvements which hopefully bring it closer to the appearance of the final GR4 variants in operation with operators as of 2018-2019. 
+
+There may be further improvements as this project moves on. 
+
+
+------------------------------------------------------------
+
 The Basic 3d-model (fuselage, wings, gear, control surfaces, UVmapping) for the Tornado was started at 2008/09 just for practicing.
 Due missing spare time it ended until late 2011 when the SUZ (System Support Center Tornado - Cassidian/EADS) at Manching/ Germany requested the 3d-model for their 
 new Mission Debriefing Software for the german Tornado Crews.
