@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>left-glareshield-panel.ac</path>
+ 
+  <effect>
+   <inherits-from>Effects/model-transparent</inherits-from>
+   <condition>
+    <property>sim/rendering/rembrandt/enabled</property>
+   </condition>
+  <object-name>left.gshield.labels</object-name>
+ </effect>
+ 
+ <animation>
+  <type>material</type>
+  <object-name>left.gshield.labels</object-name>
+  <emission>
+    <red>1</red>
+    <green>0.3</green>
+    <blue>0.3</blue>
+    <factor-prop>/systems/electrical/outputs/internal-lighting/pilot/console-lighting</factor-prop>
+  </emission>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>indicator.revthrustleft.cover</object-name>
+  <property>/instrumentation/indicators/reverse-thrust-left/cover-pos-norm</property>
+  <factor>-0.012</factor>
+  <offset-m>0.012</offset-m>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>indicator.revthrustright.cover</object-name>
+  <property>/instrumentation/indicators/reverse-thrust-right/cover-pos-norm</property>
+  <factor>-0.012</factor>
+  <offset-m>0.012</offset-m>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>indicator.liftdump.cover</object-name>
+  <property>/instrumentation/indicators/lift-dump/cover-pos-norm</property>
+  <factor>-0.012</factor>
+  <offset-m>0.012</offset-m>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <object-name>switch.lpcockleft</object-name>
+  <type>rotate</type>
+  <property>/controls/engines/engine[0]/LP-cock</property>
+  <factor>-40</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>0.00756</x-m>
+   <y-m>-0.159</y-m>
+   <z-m>-0.169</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+   <object-name>switch.lpcockleft</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>nasal</command>
+	 <script>avionics.LPcockLeft.toggle()</script>
+    </binding>
+   </action>
+ </animation>
+ 
+ <animation>
+  <object-name>switch.lpcockright</object-name>
+  <type>rotate</type>
+  <property>/controls/engines/engine[1]/LP-cock</property>
+  <factor>-40</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>0.00756</x-m>
+   <y-m>-0.159</y-m>
+   <z-m>-0.169</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+   <object-name>switch.lpcockright</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>nasal</command>
+	 <script>avionics.LPcockRight.toggle()</script>
+    </binding>
+   </action>
+ </animation>
+ 
+ <animation>
+  <object-name>switchguard.lpcockleft</object-name>
+  <type>rotate</type>
+  <property>/controls/switches/pilot/left-glareshield-panel/lpcock-left-guard</property>
+  <factor>-85</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>0.01233</x-m>
+   <y-m>0.1667</y-m>
+   <z-m>-0.1412</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+   <object-name>switchguard.lpcockleft</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>nasal</command>
+	 <script>avionics.lpcockleftguard.toggle()</script>
+    </binding>
+   </action>
+ </animation>
+ 
+ <animation>
+  <object-name>switchguard.lpcockright</object-name>
+  <type>rotate</type>
+  <property>/controls/switches/pilot/left-glareshield-panel/lpcock-right-guard</property>
+  <factor>-85</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>0.01233</x-m>
+   <y-m>0.1667</y-m>
+   <z-m>-0.1412</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+   <object-name>switchguard.lpcockright</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>nasal</command>
+	 <script>avionics.lpcockrightguard.toggle()</script>
+    </binding>
+   </action>
+ </animation>
+ 
+ <animation>
+  <object-name>switchguard.latearm</object-name>
+  <type>rotate</type>
+  <property>/controls/switches/pilot/left-glareshield-panel/late-arm-guard</property>
+  <factor>-85</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>0.01233</x-m>
+   <y-m>0.1667</y-m>
+   <z-m>0.1309</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+   <object-name>switchguard.latearm</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>nasal</command>
+	 <script>avionics.latearmguard.toggle()</script>
+    </binding>
+   </action>
+ </animation>
+ 
+</PropertyList>

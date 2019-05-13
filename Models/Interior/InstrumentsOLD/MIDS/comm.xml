@@ -1,0 +1,490 @@
+
+<PropertyList> 
+ <path>mids-panel.ac</path>
+ <background>Aircraft/Tornado/Models/Interior/Instruments/MIDS/mids-screen.png</background>
+ 
+ <animation>
+   <type>range</type>
+   <min-m>0</min-m>
+   <max-m>20</max-m>
+ </animation>
+ 
+ <animation>
+		<object-name>rad1-ident</object-name>
+		<object-name>rad2-ident</object-name>
+		<object-name>rad1-freq</object-name>
+		<object-name>rad2-freq</object-name>
+		<object-name>rad1-chan</object-name>
+		<object-name>rad2-chan</object-name>
+		<object-name>button-1</object-name>
+		<object-name>button-21</object-name>
+		<object-name>button-22</object-name>
+		<object-name>button-31</object-name>
+		<object-name>button-32</object-name>
+		<object-name>button-4</object-name>
+		<object-name>button-51</object-name>
+		<object-name>button-52</object-name>
+		<object-name>button-61</object-name>
+		<object-name>button-62</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>/instrumentation/illumination/led-brightness</factor-prop>
+			<red>0.15</red>
+			<green>0.75</green>
+			<blue>0.15</blue>
+			<!--red>0.0</red>
+			<green>0.9</green>
+			<blue>0.0</blue-->
+		</emission>
+	</animation>
+	
+	<animation>
+		<object-name>rad1-tx</object-name>
+		<object-name>rad2-tx</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>/instrumentation/illumination/led-brightness</factor-prop>
+			<red>0.80</red>
+			<green>0.15</green>
+			<blue>0.15</blue>
+			<!--red>0.0</red>
+			<green>0.9</green>
+			<blue>0.0</blue-->
+		</emission>
+	</animation>
+	
+ <animation>
+  <type>select</type>
+  <object-name>rad1-tx</object-name>
+  <condition>
+   <or>
+    <equals>
+     <property>/local/fgcom/ptt</property>
+     <value>1</value>
+    </equals>
+     <property>/instrumentation/comm[0]/ptt</property>
+   </or>
+   <equals> 
+	<property>/local/fgcom/active_radio</property>
+	<value>comm1</value>
+   </equals>
+  </condition>
+ </animation>
+ 
+ <animation>
+  <type>select</type>
+  <object-name>rad2-tx</object-name>
+  <condition>
+   <equals>
+    <property>/local/fgcom/ptt</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>/local/fgcom/active_radio</property>
+	<value>comm2</value>
+   </equals>
+  </condition>
+ </animation>
+ 
+ <!-- Buttons -->
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>midsbutt.1</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>fgcom.radio.select_radio(0);</script>    
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>midsbutt.2</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+   <command>property-adjust</command>
+    <property>/systems/CAMU/radio[0]/selected-channel-n</property>
+    <step>1</step>
+	<wrap>true</wrap>
+	<min>1</min>
+	<max>11</max>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>midsbutt.3</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+   <command>property-adjust</command>
+    <property>/systems/CAMU/radio[0]/selected-channel-n</property>
+    <step>-1</step>
+	<wrap>true</wrap>
+	<min>1</min>
+	<max>11</max>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>midsbutt.4</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>fgcom.radio.select_radio(1);</script>    
+   </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>midsbutt.5</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+   <command>property-adjust</command>
+    <property>/systems/CAMU/radio[1]/selected-channel-n</property>
+    <step>1</step>
+	<wrap>true</wrap>
+	<min>1</min>
+	<max>11</max>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>midsbutt.6</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+   <command>property-adjust</command>
+    <property>/systems/CAMU/radio[1]/selected-channel-n</property>
+    <step>-1</step>
+	<wrap>true</wrap>
+	<min>1</min>
+	<max>11</max>
+   </binding>
+  </action>
+ </animation>
+ 
+ <text>
+  <name>button-1</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.0045</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>-0.0465</y-m>
+   <z-m>1.117</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">RAD1</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>button-21</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.0044</character-size>
+  <offsets>
+   <x-m>3.67</x-m>
+   <y-m>-0.047</y-m>
+   <z-m>1.103</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">CHAN</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>button-22</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.67</x-m>
+   <y-m>-0.0465</y-m>
+   <z-m>1.098</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">UP</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>button-31</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.0044</character-size>
+  <offsets>
+   <x-m>3.67</x-m>
+   <y-m>-0.047</y-m>
+   <z-m>1.091</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">CHAN</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>button-32</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.67</x-m>
+   <y-m>-0.0465</y-m>
+   <z-m>1.086</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">DOWN</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>button-4</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.0045</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>0.0465</y-m>
+   <z-m>1.117</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">RAD2</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>button-51</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.67</x-m>
+   <y-m>0.047</y-m>
+   <z-m>1.103</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">CHAN</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>button-52</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.67</x-m>
+   <y-m>0.0465</y-m>
+   <z-m>1.098</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">UP</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>button-61</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.67</x-m>
+   <y-m>0.047</y-m>
+   <z-m>1.091</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">CHAN</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>button-62</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.67</x-m>
+   <y-m>0.0465</y-m>
+   <z-m>1.086</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">DOWN</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+<!-- Display -->
+
+<panel>
+  <path>Aircraft/Tornado/Models/Interior/Instruments/MIDS/mids-screen.xml</path>
+  <bottom-left>
+   <x-m>-0.452</x-m>
+   <y-m>-0.315</y-m>
+   <z-m>-0.37</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>-0.452</x-m>
+   <y-m>0.315</y-m>
+   <z-m>-0.37</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>-0.155</x-m>
+   <y-m>-0.312</y-m>
+   <z-m>0.05</z-m>
+  </top-left>
+  
+  </panel>
+ 
+
+ <text>
+  <name>rad1-ident</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>-0.0185</y-m>
+   <z-m>1.12</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">text-value</type>
+  <property type="string">/systems/CAMU/radio[0]/identifier</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>rad1-freq</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>-0.0185</y-m>
+   <z-m>1.114</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">text-value</type>
+  <property type="string">/systems/CAMU/radio[0]/frequency</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>rad1-chan</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.007</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>-0.0185</y-m>
+   <z-m>1.10</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">text-value</type>
+  <property type="string">/systems/CAMU/radio[0]/channel-number</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>rad2-ident</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>0.0185</y-m>
+   <z-m>1.12</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">text-value</type>
+  <property type="string">/systems/CAMU/radio[1]/identifier</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>rad2-freq</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>0.0185</y-m>
+   <z-m>1.114</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">text-value</type>
+  <property type="string">/systems/CAMU/radio[1]/frequency</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>rad2-chan</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.007</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>0.0185</y-m>
+   <z-m>1.10</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">text-value</type>
+  <property type="string">/systems/CAMU/radio[1]/channel-number</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>rad1-tx</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>-0.0185</y-m>
+   <z-m>1.092</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">TX</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>rad2-tx</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>0.0185</y-m>
+   <z-m>1.092</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">TX</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+  
+</PropertyList>

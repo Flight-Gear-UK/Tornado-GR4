@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+ 
+ <path>engine-start-panel.ac</path>
+ 
+ <animation>
+  <object-name>switch.apu</object-name>
+  <type>rotate</type>
+  <property>/controls/switches/pilot/engine-start/apu-start</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind><dep>20</dep>
+   </entry>
+   <entry>
+    <ind>1</ind><dep>0</dep>
+   </entry>
+   <entry>
+    <ind>2</ind><dep>-20</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>0.00109</x-m>
+   <y-m>-0.03274</y-m>
+   <z-m>0.001</z-m>
+  </center>
+  <axis>
+   <x>0</x>
+   <y>1</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+   <object-name>switch.apu</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>property-assign</command>
+	 <property>/controls/switches/pilot/engine-start/apu-start</property>
+	 <value>1</value>
+    </binding>
+	<mod-up>
+	<binding>
+     <command>property-assign</command>
+	 <property>/controls/switches/pilot/engine-start/apu-start</property>
+	 <value>0</value>
+    </binding>
+	</mod-up>
+	</action>
+	<action>
+	 <mod-shift>
+	 <binding>
+      <command>property-assign</command>
+	  <property>/controls/switches/pilot/engine-start/apu-start</property>
+	  <value>2</value>
+     </binding>
+	 </mod-shift>
+	</action>
+ </animation>
+ 
+ <shift-action>
+   <binding>
+   <command>property-adjust</command>
+    <property>/controls/rotary/cockpit-floods-aft</property>
+     <factor>0.05</factor>
+     <min>0</min>
+     <max>1</max>                
+     <wrap>false</wrap>
+    </binding>
+   </shift-action>
+ 
+ <animation>
+  <object-name>switch.engines</object-name>
+  <type>rotate</type>
+  <property>/controls/switches/pilot/engine-start/engine-select</property>
+  <interpolation>
+   <entry>
+    <ind>0</ind><dep>0</dep>
+   </entry>
+   <entry>
+    <ind>1</ind><dep>20</dep>
+   </entry>
+   <entry>
+    <ind>2</ind><dep>-20</dep>
+   </entry>
+  </interpolation>
+  <center>
+   <x-m>0.00109</x-m>
+   <y-m>0.005</y-m>
+   <z-m>0.001</z-m>
+  </center>
+  <axis>
+   <x>1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+   <object-name>switch.engines</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>nasal</command>
+	 <script>avionics.engstartselectswitch.toggle()</script>
+    </binding>
+   </action>
+ </animation>
+ 
+</PropertyList>

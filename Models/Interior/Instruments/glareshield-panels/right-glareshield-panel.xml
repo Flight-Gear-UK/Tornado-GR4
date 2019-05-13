@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>right-glareshield-panel.ac</path>
+ 
+ <animation>
+  <type>pick</type>
+     <object-name>ptt.nogo.1</object-name>
+  <object-name>ptt.nogo.1.lamplens</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>nasal</command>
+	 <script>avionics.nogo1.test(1)</script>
+    </binding>
+	 <mod-up>
+	  <binding>
+	  <command>nasal</command>
+	  <script>avionics.nogo1.test(0)</script>
+	 </binding>
+	 </mod-up>
+   </action>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>ptt.nogo.1</object-name>
+  <object-name>ptt.nogo.1.lamplens</object-name>
+  <property>/instrumentation/PTT-indicators/no-go[0]/test</property>
+  <factor>0.004</factor>
+  <offset-m>0</offset-m>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>material</type>
+  <object-name>ptt.nogo.1.lamplens</object-name>
+  <emission>
+    <red>1</red>
+    <green>1</green>
+    <blue>1</blue>
+    <factor-prop>/instrumentation/PTT-indicators/no-go[0]/lit</factor-prop>
+  </emission>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>ptt.nogo.2</object-name>
+  <object-name>ptt.nogo.2.lamplens</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>nasal</command>
+	 <script>avionics.nogo2.test(1)</script>
+    </binding>
+	 <mod-up>
+	  <binding>
+	  <command>nasal</command>
+	  <script>avionics.nogo2.test(0)</script>
+	 </binding>
+	 </mod-up>
+   </action>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>ptt.nogo.2</object-name>
+  <object-name>ptt.nogo.2.lamplens</object-name>
+  <property>/instrumentation/PTT-indicators/no-go[1]/test</property>
+  <factor>0.004</factor>
+  <offset-m>0</offset-m>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>material</type>
+  <object-name>ptt.nogo.2.lamplens</object-name>
+  <emission>
+    <red>1</red>
+    <green>1</green>
+    <blue>1</blue>
+    <factor-prop>/instrumentation/PTT-indicators/no-go[1]/lit</factor-prop>
+  </emission>
+ </animation>
+ 
+</PropertyList>

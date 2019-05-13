@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>generic-screen2.ac</path>
+
+  <animation>
+    <object-name>GenericScreen2</object-name>
+  </animation>
+  
+  <model>
+  <name>GenericScreen1-right</name>
+  <path>Aircraft/Tornado/Models/Interior/Instruments/common/ded.xml</path>
+  <offsets>
+   <x-m>-4.57</x-m>
+   <y-m>0.235</y-m>
+   <z-m>1.405</z-m>
+   <pitch-deg>-10</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+
+</PropertyList>

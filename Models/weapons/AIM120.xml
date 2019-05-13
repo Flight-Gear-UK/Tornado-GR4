@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+  <path>AIM120.ac</path>
+
+  <animation>
+    <object-name>aim120</object-name>
+  </animation>
+  
+  <submodel>
+	  <name>AIM-120</name>
+		<model>Aircraft/Tornado/Models/weapons/AIM120.xml</model>
+		<trigger>controls/armament/trigger1</trigger>		
+		<speed>1350</speed>
+		<repeat>true</repeat>
+		<delay>1</delay>
+		<count>-1</count>
+		<x-offset>0</x-offset>
+		<z-offset>-4</z-offset>
+		<yaw-offset>0</yaw-offset>
+		<pitch-offset>0</pitch-offset>
+		<cd>0</cd>
+		<weight>50</weight>
+		<eda>0.000001</eda>
+		<life>25</life>
+		<buoyancy>32.5</buoyancy>
+		<aero-stabilised>true</aero-stabilised>
+		<collision>true</collision>
+		<impact>true</impact>
+		<impact-report>ai/models/model-impact</impact-report>
+		<animation>
+			<enable-hot type="bool">false</enable-hot>
+		</animation>
+	</submodel>
+
+</PropertyList>

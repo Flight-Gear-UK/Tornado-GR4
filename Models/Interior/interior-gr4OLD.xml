@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+<!-- pilots -->
+<model>
+<name>pilot</name>
+    <path>Aircraft/Tornado-GR4/Models/Interior/pilot/pilot.xml</path>
+    <offsets>
+      <x-m> -4.0 </x-m>
+      <y-m> 0.06 </y-m>
+      <z-m> 1.15 </z-m>
+    </offsets>
+  </model>
+  
+  <model>
+  <name>pilot1</name>
+    <path>Aircraft/Tornado-GR4/Models/Interior/pilot/pilot.xml</path>
+    <offsets>
+       <x-m> -2.65 </x-m>
+      <y-m> 0.06 </y-m>
+      <z-m> 1.15 </z-m>
+    </offsets>
+  </model>
+  
+ 
+  
+  <animation>
+        <type>range</type>
+        <min-m>0</min-m>
+        <max-m>300</max-m>
+    </animation>
+
+  <!-- sticks and pedals -->
+<model>
+    <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/divers/stick.xml</path>
+    <offsets>
+      <x-m> -4.49 </x-m>
+      <y-m> 0.07</y-m>
+      <z-m> 0.6 </z-m>
+      <pitch-deg>-0</pitch-deg>
+    </offsets>
+  </model>
+  
+  <model>
+    <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/divers/pedals.xml</path>
+    <offsets>
+      <x-m> -4.7 </x-m>
+      <y-m> 0.07 </y-m>
+      <z-m> 0.7 </z-m>
+      <pitch-deg>-0</pitch-deg>
+    </offsets>
+  </model> 
+  
+  <!-- Fuselage invisible from internally -->
+
+    <animation>
+        <type>select</type>
+        <object-name>pilot</object-name>
+		<object-name>maingeardoor_left</object-name>
+		<object-name>maingeardoor_right</object-name>
+		<object-name>speedbrakes</object-name>
+		<object-name>maingeardoor_left</object-name>
+		<object-name>maingeardoor_right</object-name>
+		<object-name>targetpod_0.001</object-name>
+		<object-name>targetpod_0</object-name>
+		<object-name>tyrer</object-name>
+		<object-name>fronttyre</object-name>
+		<object-name>tyrel</object-name>
+		<object-name>pylon.R</object-name>
+		<object-name>pylon.C</object-name>
+		<object-name>pylon.L</object-name>
+		<object-name>guns</object-name>
+		<object-name>fin</object-name>
+        <condition>
+<not>
+            <property>sim/current-view/internal</property>
+</not>
+        </condition>
+    </animation>	
+
+
+<!--<animation>
+    <type>rotate</type>
+    <object-name>Canopy</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 60 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -2.148 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.642 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+
+<animation>
+    <type>rotate</type>
+    <object-name>CanopyGlass</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 60 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -2.148 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.642 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>
+
+<animation>
+    <type>rotate</type>
+    <object-name>grabBar</object-name>
+    <property>instrumentation/doors/crew/position-norm</property>
+    <interpolation>
+      <entry><ind> 0 </ind><dep>  0 </dep></entry>
+      <entry><ind> 1 </ind><dep> 60 </dep></entry>
+    </interpolation>
+    <center>
+      <x-m> -2.148 </x-m>
+      <y-m>  0.000 </y-m>
+      <z-m>  0.642 </z-m>
+    </center>
+    <axis>
+      <x>  0 </x>
+      <y>  1 </y>
+      <z>  0 </z>
+    </axis>
+  </animation>-->
+  
+  <animation>
+    <!-- Objets opaques -->
+    <object-name>interior</object-name>
+    <object-name>inttour</object-name>
+
+    <!-- Objets transparents -->
+    <object-name>intverriere</object-name>
+    <object-name>intvitres</object-name>
+  </animation>
+
+ <!-- <animation>
+    <type>shader</type>
+    <shader>chrome</shader>
+    <texture>Aircraft/Generic/Effects/glass_shader.png</texture>
+    <object-name>CanopyGlass</object-name>
+  </animation>
+
+  <animation>
+    <type>noshadow</type>
+    <object-name>intverriere</object-name>
+    <object-name>intvitres</object-name>
+  </animation>-->
+
+  <!-- Dash-->
+ 
+<model>
+    <path>Aircraft/Tornado-GR4/Models/Interior/cockpit.ac</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> -0.0 </y-m>
+      <z-m> 0.0 </z-m>
+    </offsets>
+  </model>
+
+<!-- Front Cockpit -->
+<model>
+  <name>MFD</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/MFD/mfd2.xml</path>
+  <offsets>
+   <x-m>-4.55</x-m>
+   <y-m>0.06</y-m>
+   <z-m>1.28</z-m>
+   <pitch-deg>-10</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+
+<model>
+  <name>GenericScreen1-right</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/generic-screen1.xml</path>
+  <offsets>
+   <x-m>-4.57</x-m>
+   <y-m>0.235</y-m>
+   <z-m>1.405</z-m>
+   <pitch-deg>-10</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>GenericScreen2- left</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/generic-screen2.xml</path>
+  <offsets>
+   <x-m>-4.57</x-m>
+   <y-m>-0.095</y-m>
+   <z-m>1.452</z-m>
+   <pitch-deg>-10</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>AI</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/ai/ai.xml</path>
+  <offsets>
+   <x-m>-4.56</x-m>
+   <y-m>-0.095</y-m>
+   <z-m>1.315</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>KI</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/ki206/ki206.xml</path>
+  <offsets>
+   <x-m>-4.55</x-m>
+   <y-m>-0.095</y-m>
+   <z-m>1.235</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Altimeter</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/alt/alt/alt.xml</path>
+  <!-- <path>Aircraft/Instruments-3d/altimeter/altimeter.xml</path> -->
+  <offsets>
+   <x-m>-4.559</x-m>
+   <y-m>-0.178</y-m>
+   <z-m>1.235</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+  <model>
+  <name>VSI</name>
+  <path>Aircraft/Instruments-3d/vsi/vsi.xml</path>
+  <offsets>
+   <x-m>-4.564</x-m>
+   <y-m>-0.178</y-m>
+   <z-m>1.318</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>ASI</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/asi/airspeed.xml</path>
+  <offsets>
+   <x-m>-4.58</x-m>
+   <y-m>-0.252</y-m>
+   <z-m>1.318</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Gmeter</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/GMeter/gmeter.xml</path>
+  <offsets>
+   <x-m>-4.564</x-m>
+   <y-m>-0.188</y-m>
+   <z-m>1.39</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>RPM1</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/rpm/rpm-1.xml</path>
+  <offsets>
+   <x-m>-4.55</x-m>
+   <y-m>0.2</y-m>
+   <z-m>1.22</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>RPM2</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/rpm/rpm-2.xml</path>
+  <offsets>
+   <x-m>-4.55</x-m>
+   <y-m>0.265</y-m>
+   <z-m>1.22</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>eprL</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/epr/eprL.xml</path>
+  <offsets>
+   <x-m>-4.55</x-m>
+   <y-m>0.2</y-m>
+   <z-m>1.283</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>eprR</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/epr/eprR.xml</path>
+  <offsets>
+   <x-m>-4.55</x-m>
+   <y-m>0.265</y-m>
+   <z-m>1.283</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ 
+ <model>
+  <name>egt1</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/egt/exh1.xml</path>
+  <offsets>
+   <x-m>-4.55</x-m>
+   <y-m>0.2</y-m>
+   <z-m>1.349</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>egt2</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/egt/exh2.xml</path>
+  <offsets>
+   <x-m>-4.55</x-m>
+   <y-m>0.265</y-m>
+   <z-m>1.349</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>pervent fuel</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/percentfuel/percentfuel.xml</path>
+  <offsets>
+   <x-m>-4.55</x-m>
+   <y-m>0.33</y-m>
+   <z-m>1.283</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>VSI</name>
+  <path>Aircraft/Instruments-3d/mag-compass.xml</path>
+  <offsets>
+   <x-m>-4.57</x-m>
+   <y-m>0.44</y-m>
+   <z-m>1.253</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>VSI</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/chronograph/chronograph.xml</path>
+  <offsets>
+   <x-m>-4.57</x-m>
+   <y-m>0.43</y-m>
+   <z-m>1.313</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ 
+ 
+
+ <model>
+  <name>fuel flow</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/FuelFlow/FF.xml</path>
+  <offsets>
+   <x-m>-4.55</x-m>
+   <y-m>0.377</y-m>
+   <z-m>1.29</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ 
+  <!--
+ <model>
+  <name>fuel control</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/Fuel/fuel.xml</path>
+  <offsets>
+   <x-m>-4.55</x-m>
+   <y-m>0.33</y-m>
+   <z-m>1.283</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model> -->
+ 
+ 
+  <model>
+  <name>Radio</name>
+  <path>Aircraft/Instruments-3d/VHF-22/ctl22-com1.xml</path>
+  <offsets>
+   <x-m>-4.58</x-m>
+   <y-m>0.35</y-m>
+   <z-m>1.37</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>trim</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/Trim/trimelevator.xml</path>
+  <offsets>
+   <x-m>-4.569</x-m>
+   <y-m>-0.328</y-m>
+   <z-m>1.306</z-m>
+   <pitch-deg>-9</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>flght indicator</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/flightindicator/flight-indicator.xml</path>
+  <offsets>
+   <x-m>-4.555</x-m>
+   <y-m>-0.27</y-m>
+   <z-m>1.24</z-m>
+   <pitch-deg>-9</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <!-- Front right -->
+ 
+ <model>
+  <name>Nav</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/nav/A-10-nav-mode-selector.xml</path>
+  <offsets>
+   <x-m>-4.532</x-m>
+   <y-m>0.39</y-m>
+   <z-m>1.18</z-m>
+   <pitch-deg>-37</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>ils</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/ils/A-10-ils.xml</path>
+  <offsets>
+   <x-m>-4.501</x-m>
+   <y-m>0.397</y-m>
+   <z-m>1.14</z-m>
+   <pitch-deg>52</pitch-deg>
+  </offsets>
+ </model>
+ <!--
+ <model>
+  <name>tacan</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/tacan/ARN-118-tacan.xml</path>
+  <offsets>
+   <x-m>-4.4715</x-m>
+   <y-m>0.383</y-m>
+   <z-m>1.103</z-m>
+   <pitch-deg>51.5</pitch-deg>
+  </offsets>
+ </model>
+ -->
+ <model>
+  <name>sas</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/sas/A-10-sas.xml</path>
+  <offsets>
+   <x-m>-4.428</x-m>
+   <y-m>0.385</y-m>
+   <z-m>1.05</z-m>
+   <pitch-deg>51.5</pitch-deg>
+  </offsets>
+ </model>
+ 
+  <!-- Rear cockpit -->
+ 
+  
+ <model>
+  <name>wx radar</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/RDR-160/wxradar-hotspots.xml</path>
+  <offsets>
+   <x-m>-3.105</x-m>
+   <y-m>0.182</y-m>
+   <z-m>1.62</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ 
+ <model>
+  <name>WeaponsSystemsOperatorL</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/wso/wso_mfd-l-gr.xml</path>
+  <offsets>
+   <x-m>-3.135</x-m>
+   <y-m>-0.19</y-m>
+   <z-m>1.45</z-m>
+   <pitch-deg>-4</pitch-deg>
+   <heading-deg>3</heading-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>RADAR_SCREEN</name>
+  <path>Aircraft/Instruments/radar.xml</path> 
+  
+  <offsets>
+   <x-m>-3.13</x-m>
+   <y-m>-0.19</y-m>
+   <z-m>1.45</z-m>
+   <pitch-deg>-4</pitch-deg>
+   <heading-deg>3</heading-deg>
+  </offsets>
+ </model>
+ 
+ 
+  
+ <model>
+  <name>WeaponsSystemsOperatorR</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/wso/wso_mfd-r-gr.xml</path>
+  <offsets>
+   <x-m>-3.135</x-m>
+   <y-m>0.315</y-m>
+   <z-m>1.45</z-m>
+   <pitch-deg>-4</pitch-deg>
+   <heading-deg>-3</heading-deg>
+  </offsets>
+ </model>
+ 
+ <!--
+ <model>
+  <name>WeaponsSystemsOperator Big MFD</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/wso/mfd.xml</path>
+  <offsets>
+   <x-m>-3.17</x-m>
+   <y-m>0.063</y-m>
+   <z-m>1.52</z-m>
+   <pitch-deg>-9</pitch-deg>
+   <heading-deg>0</heading-deg>
+  </offsets>
+ </model>
+ -->
+ 
+ <model>
+  <name>WeaponsSystemsOperator Big MFD</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/wso/bigmfd/ND.xml</path>
+  <offsets>
+   <x-m>-3.17</x-m>
+   <y-m>0.063</y-m>
+   <z-m>1.52</z-m>
+   <pitch-deg>-9</pitch-deg>
+   <heading-deg>0</heading-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Altimeter</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/alt/alt/alt.xml</path>
+  <offsets>
+   <x-m>-3.17</x-m>
+   <y-m>-0.01</y-m>
+   <z-m>1.665</z-m>
+   <pitch-deg>-0</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>ASI</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/asi/airspeed.xml</path>
+  <offsets>
+  <x-m>-3.17</x-m>
+   <y-m>0.14</y-m>
+   <z-m>1.661</z-m>
+   <pitch-deg>-5</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <!--
+ <model>
+  <name>VSI</name>
+  <path>Aircraft/Instruments-3d/vsi/vsi.xml</path>
+  <offsets>
+   <x-m>-3.105</x-m>
+   <y-m>-0.19</y-m>
+   <z-m>1.1</z-m>
+   <pitch-deg>-9</pitch-deg>
+  </offsets>
+ </model>
+ -->
+ 
+ <model>
+  <name>AI</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/ai/ai.xml</path>
+  <offsets>
+   <x-m>-3.108</x-m>
+   <y-m>-0.13</y-m>
+   <z-m>1.27</z-m>
+   <pitch-deg>-8</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>GenericScreen1-right</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/common/generic-screen1.xml</path>
+  <offsets>
+   <x-m>-3.03</x-m>
+   <y-m>0.24</y-m>
+   <z-m>1.235</z-m>
+   <pitch-deg>-10</pitch-deg><!-- needs verification! -->
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>WeaponsSystemsOperator centre buttons</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/wso/wso_button1_gr.ac</path>
+  <offsets>
+   <x-m>-3.175</x-m>
+   <y-m>0.063</y-m>
+   <z-m>1.5</z-m>
+   <pitch-deg>-9</pitch-deg>
+   <heading-deg>0</heading-deg>
+  </offsets>
+ </model>
+ 
+ 
+</PropertyList>
+

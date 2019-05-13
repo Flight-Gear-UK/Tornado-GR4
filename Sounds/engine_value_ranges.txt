@@ -1,0 +1,38 @@
+THROTTLE: 0
+rpm: 25
+n2: 30
+egt: 66
+thrust: 0
+
+THROTTLE: 0.2
+rpm: 43
+n2: 75
+egt: 457
+thrust: 2042
+
+THROTTLE: 0.88
+rpm: 104
+n2: 228
+egt: 1788
+thrust: 8989
+
+
+AB -> THROTTLE: 0.89
+
+THROTTLE: 1
+rpm: 101
+n2: 221
+egt: 1741
+thrust: 15430
+
+
+---------------------
+FULL SPEED:
+THROTTLE: 1
+rpm: 113
+n2: 253
+egt: 2257
+thrust: 15700
+
+
+high airspeed: velocities/airspeed-kt: 577

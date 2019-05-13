@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+ <name>MIDS Screen</name>
+ <background>Aircraft/Tornado/Models/Interior/Instruments/MIDS/mids-screen.png</background>
+ <w>1100</w>
+ <h>600</h>
+
+ <text>
+	 <name>vhf-label</name>
+	 <font>lcd.txf</font>
+	 <character-size type="double">0.1</character-size>
+	 <offsets>
+      <pitch-deg>90</pitch-deg>
+      <heading-deg>0</heading-deg>
+      <roll-deg>90</roll-deg>
+      <x-m>0.018</x-m>
+      <y-m>-0.0</y-m>
+      <z-m>0.0</z-m>
+    </offsets>
+	<type type="string">literal</type>
+	<property type="string">VHF1</property>
+   </text>
+ 
+</PropertyList>

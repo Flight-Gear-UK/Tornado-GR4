@@ -1,0 +1,62 @@
+
+<PropertyList>
+
+ <!-- Pilot's Display String -->
+ 
+ <path>pilot-label.ac</path>
+ 
+ <text>
+  <name>pilotlabel-left</name>
+  <font>condensed.txf</font>
+  <character-size type="double">0.05</character-size>
+  <offsets>
+   <x-m>4.2</x-m>
+   <y-m>-0.5</y-m>
+   <z-m>0.6</z-m>
+   <roll-deg>-35</roll-deg>
+   <heading-deg>-3</heading-deg>
+   <pitch-deg>-3</pitch-deg>
+  </offsets>
+ <axis-alignment>xz-plane</axis-alignment>
+  <type type="string">text-value</type>
+  <property>sim/multiplay/generic/string[0]</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <text>
+  <name>pilotlabel-right</name>
+  <font>condensed.txf</font>
+  <character-size type="double">0.05</character-size>
+  <offsets>
+   <x-m>4.2</x-m>
+   <y-m>0.5</y-m>
+   <z-m>0.6</z-m>
+   <roll-deg>35</roll-deg>
+   <heading-deg>3</heading-deg>
+   <pitch-deg>-3</pitch-deg>
+  </offsets>
+ <axis-alignment>reversed-xz-plane</axis-alignment>
+  <type type="string">text-value</type>
+  <property>sim/multiplay/generic/string[0]</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>center-center</alignment>
+ </text>
+ 
+ <animation>
+  <type>material</type>
+  <object-name>pilotlabel-left</object-name>
+  <object-name>pilotlabel-right</object-name>
+  <ambient>
+   <red>1.0</red>
+   <green>1.0</green>
+   <blue>1.0</blue>
+  </ambient>
+  <specular>
+   <red>0.1</red>
+   <green>0.1</green>
+   <blue>0.1</blue>
+  </specular>
+ </animation>
+ 
+ </PropertyList>

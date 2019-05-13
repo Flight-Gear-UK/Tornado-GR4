@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+ 
+ <path>fuel-gauge-panel.ac</path>
+ 
+<animation>
+  <type>material</type>
+  <object-name>Needle.l</object-name>
+  <object-name>Needle.r</object-name>
+  <emission>
+    <red>1</red>
+    <green>0.2</green>
+    <blue>0.2</blue>
+    <factor-prop>/systems/electrical/outputs/internal-lighting/pilot/instrument-lighting</factor-prop>
+  </emission>
+ </animation>
+ 
+<animation>
+  <type>material</type>
+  <object-name>Dial</object-name>
+  <emission>
+    <red>1</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+    <factor-prop>/systems/electrical/outputs/internal-lighting/pilot/instrument-lighting</factor-prop>
+  </emission>
+ </animation>
+ 
+<animation>
+  <type>material</type>
+  <object-name>button.cfus</object-name>
+  <object-name>button.ufus</object-name>
+  <object-name>button.wing</object-name>
+  <object-name>button.uwing</object-name>
+  <emission>
+    <red>1</red>
+    <green>0.1</green>
+    <blue>0.1</blue>
+    <factor-prop>/systems/electrical/outputs/internal-lighting/pilot/instrument-lighting</factor-prop>
+  </emission>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle.l</object-name>
+  <property>/instrumentation/fuel-gauge/reading-left</property>
+  <interpolation>
+   <entry><ind>0</ind><dep>0</dep></entry>
+   <entry><ind>4350</ind><dep>250</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>0.005</x-m>
+   <y-m>0</y-m>
+   <z-m>0.0316</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle.r</object-name>
+  <property>/instrumentation/fuel-gauge/reading-right</property>
+  <interpolation>
+   <entry><ind>0</ind><dep>0</dep></entry>
+   <entry><ind>4350</ind><dep>250</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>0.005</x-m>
+   <y-m>0</y-m>
+   <z-m>0.0316</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>Flap</object-name>
+  <property>/instrumentation/fuel-gauge/cover-pos-norm</property>
+  <factor>-0.012</factor>
+  <offset-m>0.012</offset-m>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+<animation>
+  <type>translate</type>
+  <object-name>button.cfus</object-name>
+  <property>/instrumentation/fuel-gauge/button-CFUS</property>
+  <factor>0.002</factor>
+  <offset-m>0</offset-m>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+<animation>
+  <type>translate</type>
+  <object-name>button.ufus</object-name>
+  <property>/instrumentation/fuel-gauge/button-UFUS</property>
+  <factor>0.002</factor>
+  <offset-m>0</offset-m>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+<animation>
+  <type>translate</type>
+  <object-name>button.wing</object-name>
+  <property>/instrumentation/fuel-gauge/button-WING</property>
+  <factor>0.002</factor>
+  <offset-m>0</offset-m>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+<animation>
+  <type>translate</type>
+  <object-name>button.uwing</object-name>
+  <property>/instrumentation/fuel-gauge/button-UWING</property>
+  <factor>0.002</factor>
+  <offset-m>0</offset-m>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+<animation>
+  <type>pick</type>
+   <object-name>button.cfus</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>property-assign</command>
+	 <property>/instrumentation/fuel-gauge/button-CFUS</property>
+	 <value>true</value>
+    </binding>
+    <mod-up>
+     <binding>
+     <command>property-assign</command>
+	 <property>/instrumentation/fuel-gauge/button-CFUS</property>
+	 <value>false</value>
+     </binding>
+    </mod-up>
+   </action>
+ </animation>
+ 
+<animation>
+  <type>pick</type>
+   <object-name>button.ufus</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>property-assign</command>
+	 <property>/instrumentation/fuel-gauge/button-UFUS</property>
+	 <value>true</value>
+    </binding>
+    <mod-up>
+     <binding>
+     <command>property-assign</command>
+	 <property>/instrumentation/fuel-gauge/button-UFUS</property>
+	 <value>false</value>
+     </binding>
+    </mod-up>
+   </action>
+ </animation>
+ 
+<animation>
+  <type>pick</type>
+   <object-name>button.wing</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>property-assign</command>
+	 <property>/instrumentation/fuel-gauge/button-WING</property>
+	 <value>true</value>
+    </binding>
+    <mod-up>
+     <binding>
+     <command>property-assign</command>
+	 <property>/instrumentation/fuel-gauge/button-WING</property>
+	 <value>false</value>
+     </binding>
+    </mod-up>
+   </action>
+ </animation>
+ 
+<animation>
+  <type>pick</type>
+   <object-name>button.uwing</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>property-assign</command>
+	 <property>/instrumentation/fuel-gauge/button-UWING</property>
+	 <value>true</value>
+    </binding>
+    <mod-up>
+     <binding>
+     <command>property-assign</command>
+	 <property>/instrumentation/fuel-gauge/button-UWING</property>
+	 <value>false</value>
+     </binding>
+    </mod-up>
+   </action>
+ </animation>
+ 
+</PropertyList>

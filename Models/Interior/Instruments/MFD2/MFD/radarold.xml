@@ -1,0 +1,753 @@
+<?xml version="1.0"?>
+
+<!-- Radar, with 4 AI blips (green), 20/40 mile range   -->
+<!--             4 MP blips (yellow), 20/40 mile range  -->
+<!-- Must use with the JSBSim system "radar.xml"        -->
+<!-- by Dave Culp                                       -->
+
+<PropertyList>
+
+ <path>radar.ac</path>
+
+ <animation>
+  <type>material</type>
+  <object-name>screen</object-name>
+   <emission>
+     <red>0.0</red>
+     <green>0.1</green>
+     <blue>0.0</blue>
+    <factor-prop>controls/lighting/instruments-norm</factor-prop>
+   </emission> 
+ </animation> 
+
+<!-- *************************************************-->
+<!-- * TARGET 1  (AI) range 20 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip1</object-name>
+<condition>
+	<and>
+       	<property>ai/models/aircraft[0]/radar/in-range</property>
+	<less-than>
+	<property>ai/models/aircraft[0]/radar/range-nm</property>
+	<value>21</value>
+	</less-than>
+	<equals>
+      	<property>fdm/jsbsim/systems/radar/range</property>
+      	<value>20</value>
+    	</equals>
+	</and>
+ </condition>
+</animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip1</object-name>
+  <property>ai/models/aircraft[0]/radar/x-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip1</object-name>
+  <property>ai/models/aircraft[0]/radar/y-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+<!-- *************************************************-->
+<!-- * TARGET 2  (AI) range 20 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip2</object-name>
+<condition>
+	<and>
+	<property>ai/models/aircraft[1]/radar/in-range</property>
+ 	<less-than>
+	<property>ai/models/aircraft[1]/radar/range-nm</property>
+	<value>21</value>
+	</less-than>
+	<equals>
+	<property>fdm/jsbsim/systems/radar/range</property>
+	<value>20</value>
+	</equals>
+</and>
+  </condition>
+</animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip2</object-name>
+  <property>ai/models/aircraft[1]/radar/x-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip2</object-name>
+  <property>ai/models/aircraft[1]/radar/y-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+
+<!-- *************************************************-->
+<!-- * TARGET 3  (AI) range 20 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip3</object-name>
+ <condition>
+	<and>
+       <property>ai/models/aircraft[2]/radar/in-range</property>
+	<less-than>
+	<property>ai/models/aircraft[2]/radar/range-nm</property>
+	<value>21</value>
+	</less-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>20</value>
+    </equals>
+</and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip3</object-name>
+  <property>ai/models/aircraft[2]/radar/x-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip3</object-name>
+  <property>ai/models/aircraft[2]/radar/y-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+<!-- *************************************************-->
+<!-- * TARGET 4  (AI) range 20 ***********************-->
+<!-- when there are multiple tankers, it chooses the first only? -->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip4</object-name>
+<condition>
+	<and>
+       <property>ai/models/tanker[0]/radar/in-range</property>
+	<less-than>
+	<property>ai/models/tanker[0]/radar/range-nm</property>
+	<value>21</value>
+	</less-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>20</value>
+    </equals>
+</and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip4</object-name>
+  <property>ai/models/tanker[0]/radar/x-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip4</object-name>
+  <property>ai/models/tanker[0]/radar/y-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+
+
+
+<!-- *************************************************-->
+<!-- * TARGET 1  (MP) range 20 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip5</object-name>
+ <condition>
+	<and>
+       <property>ai/models/multiplayer[0]/radar/in-range</property>
+	<less-than>
+	<property>ai/models/multiplayer[0]/radar/range-nm</property>
+	<value>21</value>
+	</less-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>20</value>
+    </equals>
+</and>
+  </condition> 
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip5</object-name>
+  <property>ai/models/multiplayer[0]/radar/x-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip5</object-name>
+  <property>ai/models/multiplayer[0]/radar/y-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+<!-- *************************************************-->
+<!-- * TARGET 2  (MP) range 20 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip6</object-name>
+ <condition>
+	<and>
+       <property>ai/models/multiplayer[1]/radar/in-range</property>
+	<less-than>
+	<property>ai/models/multiplayer[1]/radar/range-nm</property>
+	<value>21</value>
+	</less-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>20</value>
+    </equals>
+</and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip6</object-name>
+  <property>ai/models/multiplayer[1]/radar/x-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip6</object-name>
+  <property>ai/models/multiplayer[1]/radar/y-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+<!-- *************************************************-->
+<!-- * TARGET 3  (MP) range 20 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip7</object-name>
+  <condition>
+	<and>
+       <property>ai/models/multiplayer[2]/radar/in-range</property>
+	<less-than>
+	<property>ai/models/multiplayer[2]/radar/range-nm</property>
+	<value>21</value>
+	</less-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>20</value>
+    </equals>
+</and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip7</object-name>
+  <property>ai/models/multiplayer[2]/radar/x-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip7</object-name>
+  <property>ai/models/multiplayer[2]/radar/y-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+<!-- *************************************************-->
+<!-- * TARGET 4  (MP) range 20 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip8</object-name>
+<condition>
+	<and>
+       <property>ai/models/multiplayer[3]/radar/in-range</property>
+	<less-than>
+	<property>ai/models/multiplayer[3]/radar/range-nm</property>
+	<value>21</value>
+	</less-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>20</value>
+    </equals>
+</and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip8</object-name>
+  <property>ai/models/multiplayer[3]/radar/x-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip8</object-name>
+  <property>ai/models/multiplayer[3]/radar/y-shift</property>
+  <factor>0.001625</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+
+
+
+<!-- *************************************************-->
+<!-- * TARGET 1  (AI) range 40 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip41</object-name>
+  <condition>
+	<and>
+       <property>ai/models/aircraft[0]/radar/in-range</property>
+	<more-than>
+	<property>ai/models/aircraft[0]/radar/range-nm</property>
+	<value>21</value>
+	</more-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>40</value>
+    </equals>
+</and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip41</object-name>
+  <property>ai/models/aircraft[0]/radar/x-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip41</object-name>
+  <property>ai/models/aircraft[0]/radar/y-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+<!-- *************************************************-->
+<!-- * TARGET 2  (AI) range 40 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip42</object-name>
+<condition>
+<and>
+       <property>ai/models/aircraft[1]/radar/in-range</property>
+	<more-than>
+	<property>ai/models/aircraft[1]/radar/range-nm</property>
+	<value>21</value>
+	</more-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>40</value>
+    </equals>
+</and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip42</object-name>
+  <property>ai/models/aircraft[1]/radar/x-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip42</object-name>
+  <property>ai/models/aircraft[1]/radar/y-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+<!-- *************************************************-->
+<!-- * TARGET 3  (AI) range 40 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip43</object-name>
+ <condition>
+<and>
+       <property>ai/models/aircraft[2]/radar/in-range</property>
+	<more-than>
+	<property>ai/models/aircraft[2]/radar/range-nm</property>
+	<value>21</value>
+	</more-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>40</value>
+    </equals>
+</and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip43</object-name>
+  <property>ai/models/aircraft[2]/radar/x-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip43</object-name>
+  <property>ai/models/aircraft[2]/radar/y-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+<!-- *************************************************-->
+<!-- * TARGET 4  (AI) range 40 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip44</object-name>
+<condition>
+<and>
+       <property>ai/models/tanker[0]/radar/in-range</property>
+	<more-than>
+	<property>ai/models/tanker[0]/radar/range-nm</property>
+	<value>21</value>
+	</more-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>40</value>
+    </equals>
+</and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip44</object-name>
+  <property>ai/models/tanker[0]/radar/x-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip44</object-name>
+  <property>ai/models/tanker[0]/radar/y-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+<!-- *************************************************-->
+<!-- * TARGET 1  (MP) range 40 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip45</object-name>
+<condition>
+<and>
+       <property>ai/models/multiplayer[0]/radar/in-range</property>
+	<more-than>
+	<property>ai/models/multiplayer[0]/radar/range-nm</property>
+	<value>21</value>
+	</more-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>40</value>
+    </equals>
+</and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip45</object-name>
+  <property>ai/models/multiplayer[0]/radar/x-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip45</object-name>
+  <property>ai/models/multiplayer[0]/radar/y-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+<!-- *************************************************-->
+<!-- * TARGET 2  (MP) range 40 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip46</object-name>
+ <condition>
+	<and>
+       <property>ai/models/multiplayer[1]/radar/in-range</property>
+	<more-than>
+	<property>ai/models/multiplayer[1]/radar/range-nm</property>
+	<value>21</value>
+	</more-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>40</value>
+    </equals>
+</and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip46</object-name>
+  <property>ai/models/multiplayer[1]/radar/x-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip46</object-name>
+  <property>ai/models/multiplayer[1]/radar/y-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+<!-- *************************************************-->
+<!-- * TARGET 3  (MP) range 40 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip47</object-name>
+ <condition>
+	<and>
+       <property>ai/models/multiplayer[2]/radar/in-range</property>
+	<more-than>
+	<property>ai/models/multiplayer[2]/radar/range-nm</property>
+	<value>21</value>
+	</more-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>40</value>
+    </equals>
+</and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip47</object-name>
+  <property>ai/models/multiplayer[2]/radar/x-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip47</object-name>
+  <property>ai/models/multiplayer[2]/radar/y-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+<!-- *************************************************-->
+<!-- * TARGET 4  (MP) range 40 ***********************-->
+<!-- *************************************************-->
+
+ <animation>
+  <type>select</type>
+  <object-name>blip48</object-name>
+  <condition>
+<and>
+       <property>ai/models/multiplayer[3]/radar/in-range</property>
+	<more-than>
+	<property>ai/models/multiplayer[3]/radar/range-nm</property>
+	<value>21</value>
+	</more-than>
+	<equals>
+      <property>fdm/jsbsim/systems/radar/range</property>
+      <value>40</value>
+    </equals>
+</and>
+  </condition>
+ </animation>
+
+ <animation>
+  <type>translate</type>   
+  <object-name>blip48</object-name>
+  <property>ai/models/multiplayer[3]/radar/x-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <y>1</y>
+  </axis>
+ </animation>
+ <animation>
+  <type>translate</type>   
+  <object-name>blip48</object-name>
+  <property>ai/models/multiplayer[3]/radar/y-shift</property>
+  <factor>0.0008125</factor>
+  <axis>
+   <z>1</z>
+  </axis>
+ </animation>
+
+
+ <!-- Range Knob -->
+ <animation>
+  <type>rotate</type>
+  <object-name>RangeKnob</object-name>
+  <property>fdm/jsbsim/systems/radar/range</property>
+  <interpolation>
+    <entry>
+      <ind>20</ind>
+      <dep>0.0</dep>
+    </entry>
+    <entry>
+      <ind>40</ind>
+      <dep>85.0</dep>
+    </entry>
+  </interpolation>   
+  <center>
+   <x-m>0.04</x-m>
+   <y-m>-0.0645074</y-m>
+   <z-m>-0.027023</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+
+  <!-- Hot Spots -->
+  <animation>
+   <type>pick</type>
+   <object-name>placard</object-name>
+   <visible>true</visible>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>property-cycle</command>
+     <property>fdm/jsbsim/systems/radar/range</property>
+     <value>20</value>
+     <value>40</value>
+    </binding>
+   </action>
+  </animation>
+
+
+ <!-- *** LoD *** -->
+ <animation>
+  <type>range</type>
+  <min-m>0</min-m>
+  <max-m>5</max-m>
+ </animation>
+
+</PropertyList>

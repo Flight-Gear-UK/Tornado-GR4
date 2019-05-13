@@ -1,0 +1,25 @@
+AC3Db
+MATERIAL "DefaultWhite" rgb 1.0000 1.0000 1.0000  amb 1.0000 1.0000 1.0000  emis 0.0000 0.0000 0.0000  spec 0.5000 0.5000 0.5000  shi 10 trans 0.0000
+MATERIAL "Alpha" rgb 0.8000 0.8000 0.8000  amb 0.8000 0.8000 0.8000  emis 0.0000 0.0000 0.0000  spec 0.5000 0.5000 0.5000  shi 50 trans 1.0000
+OBJECT world
+name "Blender_export__pilot-label.ac"
+kids 1
+OBJECT poly
+name "PilotLabel"
+loc 4.1878824 0.5571241 -0.6111804
+texture "alpha.png"
+texrep 1 1
+numvert 4
+0.3249363 -0.0099838 -0.0322362
+0.3236849 0.0438312 0.0054192
+-0.3236849 -0.0438312 -0.0054192
+-0.3249363 0.0099838 0.0322362
+numsurf 1
+SURF 0X20
+mat 1
+refs 4
+1 0.888984 0.827036
+0 0.169411 0.827036
+2 0.169411 0.107463
+3 0.888984 0.107463
+kids 0

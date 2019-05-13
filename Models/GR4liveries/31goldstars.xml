@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+	<sim>
+		<model>
+				<livery>
+					<name type="string">RAF 31st Sqdn. "Gold Stars"</name>
+					 <index type="int">1</index>
+					  <texture>GR4liveries/31goldstars.jpg</texture>
+					  <texture-pilot>GR4liveries/RAFpilot.png</texture-pilot>
+				</livery>
+		</model>
+		<rendering>
+    <refl_correction type="string">-0.42</refl_correction>
+    </rendering>
+		
+	</sim>
+</PropertyList>

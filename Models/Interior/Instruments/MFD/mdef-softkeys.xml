@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+
+ <path>softkeys.ac</path>
+ 
+ <model>
+		<name>nav</name>
+    <path>Aircraft/eurofighter/Models/Instruments/MDEF/nav.xml</path>
+  <offsets> 
+	      <x-m>0.0</x-m>
+	      <y-m>0.0</y-m>
+	      <z-m>0.0</z-m>
+	</offsets>
+	</model>
+	
+ <animation>
+    <type>select</type>
+    <object-name>nav</object-name>
+    <condition>
+        <equals>
+          <property>instrumentation/MDEF/subsystem-selected</property>
+          <value>nav</value>
+        </equals>
+    </condition>
+  </animation>	
+	
+	
+    <model>MDEF
+	<name>xpdr</name>
+	    <path>Aircraft/eurofighter/Models/Instruments/MDEF/xpdr.xml</path>
+	    <offsets> 
+	      <x-m>0.0</x-m>
+	      <y-m>0.0</y-m>
+	      <z-m>0.0</z-m>
+	</offsets>
+	</model>
+ 
+</PropertyList>

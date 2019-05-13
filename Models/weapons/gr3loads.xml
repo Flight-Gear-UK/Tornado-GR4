@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+	
+  <!--back-->
+  <!--right -->
+  <!--up -->
+
+  <!-- pylons -->
+  
+  <model>
+    <path>Aircraft/Tornado-GR4/Models/weapons/pylons.xml</path>
+    <offsets>
+      <x-m> 0 </x-m>
+      <y-m> 0 </y-m>
+      <z-m> 0.1 </z-m>
+    </offsets>
+  </model>
+
+
+  <!-- pylon options -->
+  
+
+  <!--station left 1 -->
+
+  
+  <model>
+    <name>left-auxtank-pos-1</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/aux-tank.xml</path>
+    <offsets>
+      <x-m> 0</x-m>
+      <y-m> 0</y-m>
+      <z-m> 0</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>left-auxtank-pos-1</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[8]/selected</property>
+          <value>left-DropTank</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[8]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>  
+  
+  
+  
+  <model>
+    <name>left-brimstone-pos-1</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/brimstone.xml</path>
+    <offsets>
+      <x-m> -1.2</x-m>
+      <y-m> -0.45</y-m>
+      <z-m> -2.8</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>left-brimstone-pos-1</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[8]/selected</property>
+          <value>3 x Brimstone</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[8]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>  
+  
+ 
+  <model>
+    <name>left-stormshadow-pos-1</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/AGM154.xml</path>
+    <offsets>
+      <x-m> -0</x-m>
+      <y-m> -0.45</y-m>
+      <z-m> -2.22</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>left-stormshadow-pos-1</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[8]/selected</property>
+          <value>StormShadow</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[8]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>  
+  
+ 
+  <model>
+    <name>left-alarm-pos-1</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/alarm.xml</path>
+    <offsets>
+      <x-m> -0</x-m>
+      <y-m> -0.45</y-m>
+      <z-m> 1.5</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>left-alarm-pos-1</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[8]/selected</property>
+          <value>ALARM</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[8]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>  
+  
+
+  <model>
+    <name>left-we177-pos-1</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/WE177B.xml</path>
+    <offsets>
+      <x-m> -1.9</x-m>
+      <y-m> -0.45</y-m>
+      <z-m> -2.25</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>left-we177-pos-1</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[8]/selected</property>
+          <value>WE-177B</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[8]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation> 
+  
+  
+   <!--station left 2 -->
+   
+  
+ 
+<model>
+    <name>left-brimstone-pos-2</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/brimstone-r.xml</path>
+    <offsets>
+      <x-m> 1.3</x-m>
+      <y-m> -0.45</y-m>
+      <z-m> -2.35</z-m>
+      <pitch-deg> -6.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>left-brimstone-pos-2</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[9]/selected</property>
+          <value>3 x Brimstone</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[9]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>  
+  
+ 
+ 
+   <model>
+    <name>left-pavewayii-pos-2</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/gbu12.xml</path>
+    <offsets>
+      <x-m> 1.5</x-m>
+      <y-m> -0.5</y-m>
+      <z-m> -2.25</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+	  <roll-deg> -25 </roll-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>left-pavewayii-pos-2</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[9]/selected</property>
+          <value>Paveway-II</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[9]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation> 
+
+
+  
+  <model>
+    <name>left-pavewayiii-pos-2</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/gbu24.xml</path>
+    <offsets>
+      <x-m> 0</x-m>
+      <y-m> -0.5</y-m>
+      <z-m> -2.22</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+	  <roll-deg> 0 </roll-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>left-pavewayiii-pos-2</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[9]/selected</property>
+          <value>Paveway-III</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[9]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation> 
+  
+  
+  
+  <model>
+    <name>left-pavewayiv-pos-2</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/gbu28.xml</path>
+    <offsets>
+      <x-m> 1</x-m>
+      <y-m> -0.4</y-m>
+      <z-m> -2.55</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+	  <roll-deg> 0 </roll-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>left-pavewayiv-pos-2</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[9]/selected</property>
+          <value>Paveway-IV</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[9]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation> 
+  
+  
+  
+  <model>
+    <name>left-we177-pos-2</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/WE177B.xml</path>
+    <offsets>
+      <x-m> 1.5</x-m>
+      <y-m> -0.45</y-m>
+      <z-m> -2.25</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>left-we177-pos-2</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[9]/selected</property>
+          <value>WE-177B</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[9]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation> 
+  
+  
+  <!-- Centre pilon -->
+  
+  
+  
+  
+  
+   <!--station right 2 -->
+
+   
+  <model>
+    <name>left-brimstone-pos-2</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/brimstone-r.xml</path>
+    <offsets>
+      <x-m> 1.3</x-m>
+      <y-m> 0.5</y-m>
+      <z-m> -2.35</z-m>
+      <pitch-deg> -6.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>left-brimstone-pos-2</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[11]/selected</property>
+          <value>3 x Brimstone</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[11]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>  
+  
+
+ 
+ <model>
+    <name>right-pavewayii-pos-2</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/gbu12.xml</path>
+    <offsets>
+      <x-m> 1.5</x-m>
+      <y-m> 0.47</y-m>
+      <z-m> -2.25</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+	  <roll-deg> -25 </roll-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>right-pavewayii-pos-2</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[11]/selected</property>
+          <value>Paveway-II</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[11]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>  
+  
+ 
+  
+  <model>
+    <name>right-pavewayiii-pos-2</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/gbu24.xml</path>
+    <offsets>
+      <x-m> 0</x-m>
+      <y-m> 0.5</y-m>
+      <z-m> -2.22</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+	  <roll-deg> 0 </roll-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>right-pavewayiii-pos-2</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[11]/selected</property>
+          <value>Paveway-III</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[11]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation> 
+  
+
+  
+  <model>
+    <name>right-pavewayiv-pos-2</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/gbu28.xml</path>
+    <offsets>
+      <x-m> 1</x-m>
+      <y-m> 0.55</y-m>
+      <z-m> -2.55</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+	  <roll-deg> 0 </roll-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>right-pavewayiv-pos-2</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[11]/selected</property>
+          <value>Paveway-IV</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[11]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation> 
+ 
+  
+  <model>
+    <name>right-we177-pos-2</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/WE177B.xml</path>
+    <offsets>
+      <x-m> 1.5</x-m>
+      <y-m> 0.5</y-m>
+      <z-m> -2.25</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>right-we177-pos-2</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[11]/selected</property>
+          <value>WE-177B</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[11]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation> 
+  
+   <!--station right 1 -->
+
+   <model>
+    <name>right-auxtank-pos-1</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/aux-tank.xml</path>
+    <offsets>
+      <x-m> 0</x-m>
+      <y-m> 1.0</y-m>
+      <z-m> 0</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>right-auxtank-pos-1</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[12]/selected</property>
+          <value>right-DropTank</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[12]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation> 
+  
+ 
+  
+ <model>
+    <name>right-brimstone-pos-1</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/brimstone.xml</path>
+    <offsets>
+      <x-m> -1.2</x-m>
+      <y-m> 0.5</y-m>
+      <z-m> -2.8</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>right-brimstone-pos-1</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[12]/selected</property>
+          <value>3 x Brimstone</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[12]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>  
+
+ <model>
+    <name>right-stormshadow-pos-1</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/AGM154.xml</path>
+    <offsets>
+      <x-m> -0</x-m>
+      <y-m> 0.5</y-m>
+      <z-m> -2.22</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>right-stormshadow-pos-1</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[12]/selected</property>
+          <value>StormShadow</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[12]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>  
+
+<model>
+    <name>right-alarm-pos-1</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/alarm.xml</path>
+    <offsets>
+      <x-m> -0</x-m>
+      <y-m> 0.5</y-m>
+      <z-m> 1.5</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>right-alarm-pos-1</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[12]/selected</property>
+          <value>ALARM</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[12]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation>  
+
+
+<model>
+    <name>right-we177-pos-2</name>
+    <path>Aircraft/Tornado-GR4/Models/weapons/WE177B.xml</path>
+    <offsets>
+      <x-m> -1.9</x-m>
+      <y-m> 0.5</y-m>
+      <z-m> -2.25</z-m>
+      <pitch-deg> -0.865 </pitch-deg>
+    </offsets>
+  </model>	
+
+  <animation>
+    <type>select</type>
+    <object-name>right-we177-pos-2</object-name>      
+    <condition>
+      <and>
+        <equals>
+          <property>sim/weight[12]/selected</property>
+          <value>WE-177B</value>
+        </equals>
+        <equals>
+          <property>controls/armament/station[12]/release</property>
+          <value>false</value>
+        </equals>
+      </and>
+    </condition>
+  </animation> 
+  
+  
+</PropertyList>

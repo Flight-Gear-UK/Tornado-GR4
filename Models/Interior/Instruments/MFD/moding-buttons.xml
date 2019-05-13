@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+
+ <path>moding-buttons.ac</path>
+ 
+ <!-- XPDR (Transponder -->
+ 
+ <animation>
+  <type>select</type>
+  <object-name>xpdr.mode</object-name>
+  <object-name>xpdr.mode1</object-name>
+  <!-- condition>
+   <and>
+	<greater-than>
+     <property>/systems/electrical/outputs/avionics/MDEF</property>
+	 <value>22</value>
+    </greater-than>
+	<equals>
+	 <property>/instrumentation/MDEF/subsystem-selected</property>
+	 <value>xpdr</value>
+	</equals>
+   </and>
+  </condition -->
+ </animation>
+ 
+ <animation>
+	 <condition>
+	  <greater-than>
+	   <property>/systems/electrical/outputs/avionics/MDEF</property>
+	   <value>24</value>
+	  </greater-than>
+	 </condition>
+		<object-name>xpdr.mode</object-name>
+		<object-name>xpdr.mode1</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>/instrumentation/illumination/led-brightness</factor-prop>
+            <red>0.15</red>
+			<green>0.9</green>
+			<blue>0.15</blue>
+		</emission>
+	</animation>
+ 
+ <text>
+  <name>xpdr.mode</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.012</character-size>
+   <offsets>
+    <pitch-deg>90</pitch-deg>
+    <heading-deg>0</heading-deg>
+    <roll-deg>90</roll-deg>
+    <x-m>0.0</x-m>
+    <y-m>0.0</y-m>
+    <z-m>0.0</z-m>
+   </offsets>
+  <type type="string">literal</type>
+  <property type="string">MODE</property>
+  <align>left-center</align>
+ </text>
+  <text>
+  <name>xpdr.mode</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.012</character-size>
+   <offsets>
+    <pitch-deg>90</pitch-deg>
+    <heading-deg>0</heading-deg>
+    <roll-deg>90</roll-deg>
+    <x-m>0.0</x-m>
+    <y-m>-0.065</y-m>
+    <z-m>0.05</z-m>
+   </offsets>
+  <type type="string">literal</type>
+  <property type="string">1</property>
+  <align>left-center</align>
+ </text>
+ 
+</PropertyList>

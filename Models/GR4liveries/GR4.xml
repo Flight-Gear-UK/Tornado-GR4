@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+
+<PropertyList>
+	<sim>
+		<model>
+				<livery>
+					<name type="string">GR4</name>
+					 <index type="int">1</index>
+					  <texture>GR4.jpg</texture>
+					  <texture-pilot>GR4liveries/RAFpilot.png</texture-pilot>
+				</livery>
+	<Tornado>
+	<FuelHose type="bool">true</FuelHose>
+	</Tornado>
+		</model>
+		<rendering>
+    <refl_correction type="string">-0.42</refl_correction>
+    </rendering>
+	</sim>
+</PropertyList>

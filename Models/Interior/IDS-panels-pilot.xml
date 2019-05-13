@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+
+ <path>newtub.ac</path>
+ 
+  <model>
+  <name>Right Glareshield Panel</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/cockpit-floods.xml</path>
+ </model>
+ 
+ <model>
+  <name>Engine 1 RPM</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/engine-gauges/tornado-rpm-eng1.xml</path>
+  <offsets>
+   <x-m>-0.42</x-m>
+   <y-m>0.13</y-m>
+   <z-m>0.4994</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Engine 2 RPM</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/engine-gauges/tornado-rpm-eng2.xml</path>
+  <offsets>
+   <x-m>-0.42</x-m>
+   <y-m>0.1982</y-m>
+   <z-m>0.4994</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Engine 1 TBT</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/engine-gauges/tornado-rpm-eng1.xml</path>
+  <offsets>
+   <x-m>-0.415</x-m>
+   <y-m>0.13</y-m>
+   <z-m>0.432</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Engine 2 TBT</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/engine-gauges/tornado-rpm-eng2.xml</path>
+  <offsets>
+   <x-m>-0.415</x-m>
+   <y-m>0.1982</y-m>
+   <z-m>0.432</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Engine 1 AJ</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/engine-gauges/nozzle-area.xml</path>
+  <offsets>
+   <x-m>-0.41</x-m>
+   <y-m>0.13</y-m>
+   <z-m>0.365</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Engine 2 AJ</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/engine-gauges/nozzle-area.xml</path>
+  <offsets>
+   <x-m>-0.41</x-m>
+   <y-m>0.1982</y-m>
+   <z-m>0.365</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Fuel Flow Gauge</name> <!-- Temporary, to be replaced -->
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/engine-gauges/nozzle-area.xml</path>
+  <offsets>
+   <x-m>-0.42</x-m>
+   <y-m>0.272</y-m>
+   <z-m>0.4994</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Fuel Gauge Panel</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/fuel-gauge-panel/fuel-gauge-panel.xml</path>
+  <offsets>
+   <x-m>-0.4125</x-m>
+   <y-m>0.272</y-m>
+   <z-m>0.3996</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Fuel Gauge Panel</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/fuel-gauge-panel/fuel-gauge-panel.xml</path>
+  <offsets>
+   <x-m>-0.4125</x-m>
+   <y-m>0.272</y-m>
+   <z-m>0.3996</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Top Right Screen</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/trscreen/trscreen.xml</path>
+  <offsets>
+   <x-m>-0.42</x-m>
+   <y-m>0.165</y-m>
+   <z-m>0.5875</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Left Glareshield Panel</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/glareshield-panels/left-glareshield-panel.xml</path>
+  <offsets>
+   <x-m>-0.3975</x-m>
+   <y-m>-0.27</y-m>
+   <z-m>0.575</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Right Glareshield Panel</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/glareshield-panels/right-glareshield-panel.xml</path>
+  <offsets>
+   <x-m>-0.3975</x-m>
+   <y-m>0.27</y-m>
+   <z-m>0.575</z-m>
+   <pitch-deg>0</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Rapid Take Off Panel</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/rapid-takeoff-panel/rapid-takeoff-panel.xml</path>
+  <offsets>
+   <x-m>-0.392</x-m>
+   <y-m>0</y-m>
+   <z-m>0.2104</z-m>
+   <pitch-deg>-5</pitch-deg>
+  </offsets>
+ </model>
+ 
+ <model>
+  <name>Left Console</name>
+  <path>Aircraft/Tornado-GR4/Models/Interior/Instruments/left-console/left-console.xml</path>
+ </model>
+ 
+ <animation>
+  <type>pick</type>
+     <object-name>ptt.fire.l</object-name>
+  <object-name>ptt.fire.l.lamplens</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>nasal</command>
+	 <script>avionics.firelptt.test(1)</script>
+    </binding>
+	 <mod-up>
+	  <binding>
+	  <command>nasal</command>
+	  <script>avionics.firelptt.test(0)</script>
+	 </binding>
+	 </mod-up>
+   </action>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>ptt.fire.l</object-name>
+  <object-name>ptt.fire.l.lamplens</object-name>
+  <property>/instrumentation/PTT-indicators/fire-left/test</property>
+  <factor>0.004</factor>
+  <offset-m>0</offset-m>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>material</type>
+  <object-name>ptt.fire.l.lamplens</object-name>
+  <emission>
+    <red>1</red>
+    <green>1</green>
+    <blue>1</blue>
+    <factor-prop>/instrumentation/PTT-indicators/fire-left/lit</factor-prop>
+  </emission>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>ptt.fire.r</object-name>
+  <object-name>ptt.fire.r.lamplens</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <binding>
+     <command>nasal</command>
+	 <script>avionics.firerptt.test(1)</script>
+    </binding>
+	 <mod-up>
+	  <binding>
+	  <command>nasal</command>
+	  <script>avionics.firerptt.test(0)</script>
+	 </binding>
+	 </mod-up>
+   </action>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>ptt.fire.r</object-name>
+  <object-name>ptt.fire.r.lamplens</object-name>
+  <property>/instrumentation/PTT-indicators/fire-right/test</property>
+  <factor>0.004</factor>
+  <offset-m>0</offset-m>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>material</type>
+  <object-name>ptt.fire.r.lamplens</object-name>
+  <emission>
+    <red>1</red>
+    <green>1</green>
+    <blue>1</blue>
+    <factor-prop>/instrumentation/PTT-indicators/fire-right/lit</factor-prop>
+  </emission>
+ </animation>
+ 
+</PropertyList>

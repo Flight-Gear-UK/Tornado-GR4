@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+ 
+ <model>
+  <name>Engine Start Panel</name>
+  <path>Aircraft/Tornado2/Models/Interior/Instruments/left-console/engine-start-panel/engine-start-panel.xml</path>
+  <offsets>
+   <x-m>-0.3675</x-m>
+   <y-m>-0.378</y-m>
+   <z-m>0.26</z-m>
+   <roll-deg>-10.9</roll-deg>
+  </offsets>
+ </model>
+ 
+</PropertyList>

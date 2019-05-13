@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PropertyList>
+ 
+ <path>tornado-rpm.ac</path>
+ 
+ <animation>
+  <type>material</type>
+  <object-name>Needle</object-name>
+  <emission>
+    <red>1</red>
+    <green>0.2</green>
+    <blue>0.2</blue>
+    <factor-prop>/systems/electrical/outputs/internal-lighting/pilot/instrument-lighting</factor-prop>
+  </emission>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>Needle</object-name>
+  <property>/instrumentation/engine-gauges/engine-rpm[0]/reading</property>
+  <interpolation>
+   <entry><ind>0</ind><dep>0</dep></entry>
+   <entry><ind>110</ind><dep>250</dep></entry>
+  </interpolation>
+  <center>
+   <x-m>0</x-m>
+   <y-m>0</y-m>
+   <z-m>0</z-m>
+  </center>
+  <axis>
+   <x>-1</x>
+   <y>0</y>
+   <z>0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>translate</type>
+  <object-name>Flap</object-name>
+  <property>/instrumentation/engine-gauges/engine-rpm[0]/cover-pos-norm</property>
+  <factor>-0.012</factor>
+  <offset-m>0.012</offset-m>
+  <axis>
+   <x>0</x>
+   <y>0</y>
+   <z>1</z>
+  </axis>
+ </animation>
+ 
+</PropertyList>

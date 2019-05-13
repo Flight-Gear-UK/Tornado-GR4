@@ -1,0 +1,319 @@
+
+
+<PropertyList> 
+ <path>mids-panel.ac</path>
+ <background>Aircraft/Tornado/Models/Interior/Instruments/MIDS/mids-screen.png</background>
+ 
+ <animation>
+   <type>range</type>
+   <min-m>0</min-m>
+   <max-m>20</max-m>
+ </animation>
+ 
+ <animation>
+		<object-name>rad1-label</object-name>
+		<object-name>rad2-label</object-name>
+		<object-name>rad1-chan</object-name>
+		<object-name>rad2-chan</object-name>
+		<object-name>zulu</object-name>
+		<object-name>zulu-label</object-name>
+		<object-name>localtime</object-name>
+		<object-name>localtime-label</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>/instrumentation/illumination/led-brightness</factor-prop>
+			<red>0.1</red>
+			<green>0.75</green>
+			<blue>0.1</blue>
+			<!--red>0.0</red>
+			<green>0.9</green>
+			<blue>0.0</blue-->
+		</emission>
+	</animation>
+	
+	<animation>
+		<object-name>rad1-tx</object-name>
+		<object-name>rad2-tx</object-name>
+		<type>material</type>
+		<emission>
+			<factor-prop>/instrumentation/illumination/led-brightness</factor-prop>
+			<red>0.80</red>
+			<green>0.15</green>
+			<blue>0.15</blue>
+			<!--red>0.0</red>
+			<green>0.9</green>
+			<blue>0.0</blue-->
+		</emission>
+	</animation>
+	
+ <animation>
+  <type>select</type>
+  <object-name>rad1-tx</object-name>
+  <condition>
+   <or>
+    <equals>
+     <property>/local/fgcom/ptt</property>
+     <value>1</value>
+    </equals>
+     <property>/instrumentation/comm[0]/ptt</property>
+   </or>
+   <equals> 
+	<property>/local/fgcom/active_radio</property>
+	<value>comm1</value>
+   </equals>
+  </condition>
+ </animation>
+ 
+ <animation>
+  <type>select</type>
+  <object-name>rad2-tx</object-name>
+  <condition>
+   <equals>
+    <property>/local/fgcom/ptt</property>
+    <value>1</value>
+   </equals>
+   <equals>
+    <property>/local/fgcom/active_radio</property>
+	<value>comm2</value>
+   </equals>
+  </condition>
+ </animation>
+ 
+ <!-- Buttons -->
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>midsbutt.1</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>fgcom.radio.select_radio(0);</script>    
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>midsbutt.2</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+   <command>property-swap</command>
+    <property>/instrumentation/comm/frequencies/selected-mhz</property>
+    <property>/instrumentation/comm/frequencies/standby-mhz</property>
+   </binding>
+  </action>
+ </animation>
+ 
+ <animation>
+  <type>pick</type>
+  <object-name>midsbutt.4</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+    <command>nasal</command>
+    <script>fgcom.radio.select_radio(1);</script>    
+   </binding>
+  </action>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+  <object-name>midsbutt.5</object-name>
+  <action>
+   <button>0</button>
+   <binding>
+   <command>property-swap</command>
+    <property>/instrumentation/comm[1]/frequencies/selected-mhz</property>
+    <property>/instrumentation/comm[1]/frequencies/standby-mhz</property>
+   </binding>
+  </action>
+ </animation>
+ 
+<!-- Display -->
+
+<panel>
+  <path>Aircraft/Tornado/Models/Interior/Instruments/MIDS/mids-screen.xml</path>
+  <bottom-left>
+   <x-m>-0.452</x-m>
+   <y-m>-0.315</y-m>
+   <z-m>-0.37</z-m>
+  </bottom-left>
+  <bottom-right>
+   <x-m>-0.452</x-m>
+   <y-m>0.315</y-m>
+   <z-m>-0.37</z-m>
+  </bottom-right>
+  <top-left>
+   <x-m>-0.155</x-m>
+   <y-m>-0.312</y-m>
+   <z-m>0.05</z-m>
+  </top-left>
+  
+  </panel>
+ 
+
+ <text>
+  <name>rad1-label</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>-0.031</y-m>
+   <z-m>1.11</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">R1</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-center</alignment>
+ </text>
+ 
+ <text>
+  <name>rad1-chan</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>-0.022</y-m>
+   <z-m>1.11</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">text-value</type>
+  <property type="string">/systems/CAMU/radio[0]/channel-number</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-center</alignment>
+ </text>
+ 
+ <text>
+  <name>rad2-label</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>-0.031</y-m>
+   <z-m>1.105</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">R2</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-center</alignment>
+ </text>
+ 
+ <text>
+  <name>rad2-chan</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>-0.022</y-m>
+   <z-m>1.105</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">text-value</type>
+  <property type="string">/systems/CAMU/radio[1]/channel-number</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-center</alignment>
+ </text>
+ 
+ <text>
+  <name>rad1-tx</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>-0.013</y-m>
+   <z-m>1.11</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">TX</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-center</alignment>
+ </text>
+ 
+ <text>
+  <name>rad2-tx</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>-0.013</y-m>
+   <z-m>1.105</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">TX</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-center</alignment>
+ </text>
+ 
+ <text>
+  <name>zulu-label</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>0.009</y-m>
+   <z-m>1.11</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">Z</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>right-center</alignment>
+ </text>
+ 
+ <text>
+  <name>zulu</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>0.0125</y-m>
+   <z-m>1.11</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">text-value</type>
+  <property type="string">/sim/time/gmt-string</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-center</alignment>
+ </text>
+ 
+ <text>
+  <name>localtime-label</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>0.009</y-m>
+   <z-m>1.105</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">literal</type>
+  <text type="string">L</text>
+  <draw-text type="bool">true</draw-text>
+  <alignment>right-center</alignment>
+ </text>
+ 
+ <text>
+  <name>localtime</name>
+  <font>lcd.txf</font>
+  <character-size type="double">0.004</character-size>
+  <offsets>
+   <x-m>3.68</x-m>
+   <y-m>0.0125</y-m>
+   <z-m>1.105</z-m>
+  </offsets>
+  <axis-alignment>yz-plane</axis-alignment>
+  <type type="string">text-value</type>
+  <property type="string">/instrumentation/clock/local-short-string</property>
+  <draw-text type="bool">true</draw-text>
+  <alignment>left-center</alignment>
+ </text>
+
+
+
+</PropertyList>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PropertyList>
+ <name>MIDS Screen</name>
+ <background>Aircraft/Tornado/Models/Interior/Instruments/MIDS/mids-screen.png</background>
+ <w>110</w>
+ <h>60</h>
+
+</PropertyList>
